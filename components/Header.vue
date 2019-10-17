@@ -10,7 +10,7 @@
     <input type="search" class="form-control input-dark" />
   </div>
   <div class="Header-item Header-item--full">
-    <router-link :to="{ path: '/tag/'}">Tag</router-link>
+    <router-link class="Header-link" :to="{ path: '/tag/'}">Tag</router-link>
   </div>
   <div class="Header-item mr-0">
     <img class="avatar" height="20" alt="@octocat" src="https://github.com/octocat.png" width="20">

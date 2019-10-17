@@ -1,5 +1,5 @@
 <template>
-  <div class="footer container-lg width-full px-3" role="contentinfo" style="margin: auto;">
+  <div class="footer container-lg width-full px-3" role="contentinfo" style="margin: 0 auto;">
     <div
       class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light"
     >

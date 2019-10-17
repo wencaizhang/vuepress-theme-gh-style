@@ -2,7 +2,7 @@
   <div id="global-layout">
     <Header />
 
-    <DefaultGlobalLayout />
+    <DefaultGlobalLayout style="flex: 1;" />
 
     <Footer />
   </div>
@@ -22,6 +22,11 @@ export default {
 @import "@primer/css/index.scss";
 li {
   list-style: none;
+}
+#global-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .topic-tag {
   display: inline-block;
