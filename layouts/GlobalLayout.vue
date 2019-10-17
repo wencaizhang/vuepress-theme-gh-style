@@ -1,18 +1,38 @@
 <template>
   <div id="global-layout">
-    <header style="background-color: #DDD">
-      <router-link to="/">{{ $site.title }}</router-link>· <router-link to="/tag/">Tag</router-link>
-    </header><br>
-    <DefaultGlobalLayout/><br>
-    <footer style="background-color: #DDD"><a href="https://github.com/ulivz/70-lines-of-vuepress-blog-theme">Github</a> · Powered by VuePress</p>
-</footer>
+    <Header />
+
+    <DefaultGlobalLayout />
+
+    <Footer />
   </div>
 </template>
 
 <script>
-  import GlobalLayout from '@app/components/GlobalLayout.vue'
-  
-  export default {
-    components: { DefaultGlobalLayout: GlobalLayout },
-  }
+import GlobalLayout from "@app/components/GlobalLayout.vue";
+
+import Header from "@theme/components/Header.vue";
+import Footer from "@theme/components/Footer.vue";
+export default {
+  components: { DefaultGlobalLayout: GlobalLayout, Header, Footer }
+};
 </script>
+
+<style lang="scss">
+@import "@primer/css/index.scss";
+li {
+  list-style: none;
+}
+.topic-tag {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  margin: 0 0.5em 0.5em 0;
+  white-space: nowrap;
+  background-color: #f1f8ff;
+  border-radius: 3px;
+}
+.topic-tag-link:hover {
+  text-decoration: none;
+  background-color: #def;
+}
+</style>
