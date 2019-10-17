@@ -1,7 +1,8 @@
 ---
-tag:
+tags:
   - vue
   - shanghai
+category: VuePress
 ---
 
 # Shanghai

@@ -1,7 +1,8 @@
 ---
-tag:
+tags:
   - vue 
   - summary
+category: Vue
 ---
 
 # Summary

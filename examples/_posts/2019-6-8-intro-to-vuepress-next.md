@@ -1,7 +1,8 @@
 ---
-tag:
+tags:
   - vue
   - vuepress
+category: VuePress
 ---
 
 # Intro to VuePress Next

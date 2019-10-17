@@ -1,7 +1,8 @@
 ---
-tag:
+tags:
   - vue 
   - vueconf
+category: Vue
 ---
 
 # VueConf
