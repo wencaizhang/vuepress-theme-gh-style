@@ -96,37 +96,8 @@
         <div
           class="Box-body d-flex flex-justify-between bg-blue-light flex-column flex-md-row flex-items-start flex-md-items-center"
         >
-          <span class="pr-md-4 f6">categories: 
-            <router-link
-              v-for="cate in $frontmatter.categories"
-              :key="cate"
-              :to="{ path: `/categories/${cate}/` }"
-            >
-              {{ cate }}
-            </router-link>
-          </span>
-          <!-- <span class="pr-md-4 f6">author: {{ $themeConfig.author }}</span> -->
-          <span class="d-inline-block flex-shrink-0 v-align-bottom f6 mt-2 mt-md-0">
-
-          <ul>
-            <li>
-              上一篇：
-              <router-link v-if="prevPost" :to="{ path: prevPost.path }">{{ prevPost.title }}</router-link>
-              <span v-else class="text-gray-dark">没有了</span>
-            </li>
-            <li>
-              下一篇：
-              <router-link v-if="nextPost" :to="{ path: nextPost.path }">{{ nextPost.title }}</router-link>
-              <span v-else class="text-gray-dark">没有了</span>
-            </li>
-          </ul>
-          </span>
-        </div>
-        <div class="Box-body d-flex flex-justify-between flex-items-center flex-auto f6 border-bottom-0 flex-wrap">
           <div>
-            <span class="author" rel="author">
-              {{ $themeConfig.author }}
-            </span>
+            <span class="author" rel="author">author: {{ $themeConfig.author }}</span>
           </div>
           <ul>
             <li class="last-updated" v-if="createdDate">
@@ -139,19 +110,44 @@
             </li>
           </ul>
         </div>
+        <div
+          class="Box-body d-flex flex-justify-between flex-items-center flex-auto f6 border-bottom-0 flex-wrap"
+        >
+          <span class="pr-md-4 f6 text-mono">
+            categories:
+            <span v-for="(cate, index) in $frontmatter.categories" :key="cate">
+              <span v-if="index !== 0">,</span>
+              <router-link :to="{ path: `/categories/${cate}/` }">{{ cate }}</router-link>
+            </span>
+          </span>
+
+          <ul class="text-mono">
+            <li>
+              上一篇：
+              <router-link v-if="prevPost" :to="{ path: prevPost.path }">{{ prevPost.title }}</router-link>
+              <span v-else class="text-gray-dark">没有了</span>
+            </li>
+            <li>
+              下一篇：
+              <router-link v-if="nextPost" :to="{ path: nextPost.path }">{{ nextPost.title }}</router-link>
+              <span v-else class="text-gray-dark">没有了</span>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="Box mt-3">
         <div
           class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center"
         >
           <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-            {{ $page.frontmatter.tags.length }} tags:
-            <router-link
-              v-for="tag in $page.frontmatter.tags"
+            tags({{ $page.frontmatter.tags.length }}):
+            <span
+              v-for="(tag, index) in $frontmatter.tags"
               :key="tag"
-              :to="{ path: `/tag/${tag}` }"
-              style="margin: 0 2px;"
-            >{{ tag }}</router-link>
+            >
+              <span v-if="index !== 0">,</span>
+              <router-link :to="{ path: `/tag/${tag}` }">{{ tag }}</router-link>
+            </span>
           </div>
 
           <div
@@ -209,10 +205,11 @@ export default {
     };
   },
   computed: {
-    createdText () {
-      return 'created';
+    createdText() {
+      return "created";
     },
-    createdDate () {
+    createdDate() {
+      console.log(this.$page);
       return this.$frontmatter.date;
     },
     lastUpdated() {
@@ -228,7 +225,7 @@ export default {
       return "Last Updated";
     },
     postList() {
-      return this.$site.pages.filter(item => item.pid === 'post');
+      return this.$site.pages.filter(item => item.pid === "post");
     },
     currPostIndex() {
       return this.postList.findIndex(item => item.key === this.$page.key);
@@ -256,9 +253,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this);
-    console.log(this.$page);
-    console.log(this.prevPost);
     this.recommendCouter = this.$themeConfig.recommendCouter || 5;
     const cate = this.$frontmatter.category;
     const tags = this.$frontmatter.tags;
