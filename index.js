@@ -1,6 +1,7 @@
 module.exports = (themeConfig, ctx) => {
   const config = {
     plugins: [
+      ['@vuepress/last-updated'],
       ['@vuepress/blog', {
         directories: [
           {
@@ -10,6 +11,7 @@ module.exports = (themeConfig, ctx) => {
             pagination: {
               perPagePosts: 2,
             },
+            itemPermalink: '/:year-:month-:day/:slug',
           },
         ],
         frontmatters: [
@@ -23,6 +25,15 @@ module.exports = (themeConfig, ctx) => {
             pagination: {
               perPagePosts: 3
             }
+          },
+          {
+            id: 'categories',
+            keys: ['categories'],
+            path: '/categories/',
+            layout: 'categories',
+            frontmatter: { title: 'categories' },
+            layout: 'Categories',
+            scopeLayout: 'Category'
           },
         ]
       }],

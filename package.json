@@ -16,6 +16,7 @@
     "vuepress": "next"
   },
   "dependencies": {
-    "@primer/css": "^13.1.0"
+    "@primer/css": "^13.1.0",
+    "@vuepress/plugin-last-updated": "^1.2.0"
   }
 }
