@@ -13,10 +13,10 @@
     <router-link class="Header-link" :to="{ path: '/'}">Home</router-link>
   </div>
   <div class="Header-item">
-    <router-link class="Header-link" :to="{ path: '/tag/'}">Tag</router-link>
+    <router-link class="Header-link" :to="{ path: '/categories/'}">Categories</router-link>
   </div>
   <div class="Header-item">
-    <router-link class="Header-link" :to="{ path: '/categories/'}">Categories</router-link>
+    <router-link class="Header-link" :to="{ path: '/tag/'}">Tag</router-link>
   </div>
   <div class="Header-item mr-0">
     <!-- <img class="avatar" height="20" alt="@octocat" src="https://github.com/octocat.png" width="20"> -->
