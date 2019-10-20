@@ -8,12 +8,12 @@
         <div class="abstract col-9 d-inline-block text-gray mb-2 pr-4" v-html="page.excerpt"></div>
       </div>
       <div class="topics-row-container d-inline-flex flex-wrap flex-items-center f6 my-1">
-        <a
-          href="#"
+        <router-link
           class="topic-tag topic-tag-link f6 my-1"
           v-for="tag in page.frontmatter.tags"
           :key="tag"
-        >{{ tag }}</a>
+          :to="{ path: `/tag/${tag}` }"
+        >{{ tag }}</router-link>
       </div>
       <div class="f6 text-gray mt-2">
         category:
