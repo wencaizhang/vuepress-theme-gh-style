@@ -9,10 +9,9 @@
 </template>
 
 <script>
-import GlobalLayout from "@app/components/GlobalLayout.vue";
-
-import Header from "@theme/components/Header.vue";
-import Footer from "@theme/components/Footer.vue";
+import GlobalLayout from "@app/components/GlobalLayout";
+import Header from "@theme/components/Header";
+import Footer from "@theme/components/Footer";
 export default {
   components: { DefaultGlobalLayout: GlobalLayout, Header, Footer }
 };
@@ -28,6 +27,9 @@ li {
   display: flex;
   flex-direction: column;
 }
+// a:hover {
+  // text-decoration: none;
+// }
 .topic-tag {
   display: inline-block;
   padding: 0.3em 0.9em;

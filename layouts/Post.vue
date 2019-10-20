@@ -193,9 +193,9 @@
 
 
 <script>
-import RawLink from "@theme/components/RawLink.vue";
-import BlameLink from "@theme/components/BlameLink.vue";
-import HistoryLink from "@theme/components/HistoryLink.vue";
+import RawLink from "@theme/components/RawLink";
+import BlameLink from "@theme/components/BlameLink";
+import HistoryLink from "@theme/components/HistoryLink";
 export default {
   components: { RawLink, BlameLink, HistoryLink },
   data() {
