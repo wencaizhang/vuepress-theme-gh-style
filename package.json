@@ -14,6 +14,7 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "vuepress": "next",
+    "vuepress-plugin-container": "^2.1.0",
     "vuepress-plugin-nprogress": "^1.1.4",
     "vuepress-plugin-reading-time": "^0.1.1"
   },

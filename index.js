@@ -8,6 +8,9 @@ module.exports = (themeConfig, ctx) => {
     plugins: [
       ['@vuepress/last-updated'],
       ['vuepress-plugin-nprogress'],
+      ['vuepress-plugin-container', { type: 'tip' }],
+      ['vuepress-plugin-container', { type: 'warning' }],
+      ['vuepress-plugin-container', { type: 'danger' }],
       ['vuepress-plugin-reading-time', {
         excludes: ['/about', '/tag/.*', '/categories/.*']
       }],
