@@ -17,6 +17,7 @@ export default {
 };
 </script>
 
+<style lang="stylus" src="../styles/index.styl" ></style>
 <style lang="scss">
 @import "@primer/css/index.scss";
 
