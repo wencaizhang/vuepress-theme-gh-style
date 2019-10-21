@@ -7,6 +7,18 @@ module.exports = (themeConfig, ctx) => {
   const config = {
     plugins: [
       ['@vuepress/last-updated'],
+      [
+        'vuepress-plugin-medium-zoom',
+        {
+          selector: '.markdown-body img',
+          delay: 1000,
+          options: {
+            margin: 24,
+            background: 'rgba(0,0,0,0.6)',
+            scrollOffset: 0,
+          },
+        },
+      ],
       ['@vuepress/blog', {
         directories: [
           {
