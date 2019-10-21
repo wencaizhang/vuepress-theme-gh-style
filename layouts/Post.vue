@@ -11,7 +11,7 @@
           <!-- <span class="path-divider">/</span>
           <strong>{{ $page.title }}</strong>-->
         </h1>
-        <ul class="pagehead-actions">
+        <ul class="pagehead-actions list-style-none">
           <li>
             <router-link class="btn btn-sm btn-with-count" :to="{ path: '/' }">Posts</router-link>
             <router-link class="social-count" :to="{ path: '/' }">{{ postLength }}</router-link>
@@ -99,7 +99,7 @@
           <div>
             <span class="author" rel="author">author: {{ $themeConfig.author }}</span>
           </div>
-          <ul>
+          <ul class="list-style-none">
             <li class="last-updated" v-if="createdDate">
               <span class="prefix">{{ createdText }}:</span>
               <span class="time">{{ createdDate }}</span>
@@ -121,7 +121,7 @@
             </span>
           </span>
 
-          <ul class="text-mono">
+          <ul class="text-mono list-style-none">
             <li>
               上一篇：
               <router-link v-if="prevPost" :to="{ path: prevPost.path }">{{ prevPost.title }}</router-link>

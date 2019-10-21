@@ -2,7 +2,7 @@
   <div class="container-xl width-full clearfix px-3 mt-4">
     <Profile>
       <FilterVue />
-      <ul id="default-layout">
+      <ul id="default-layout list-style-none">
         <li
           v-for="page in $pagination.pages"
           :key="page.path"

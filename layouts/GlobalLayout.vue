@@ -19,9 +19,7 @@ export default {
 
 <style lang="scss">
 @import "@primer/css/index.scss";
-li {
-  list-style: none;
-}
+
 #global-layout {
   min-height: 100vh;
   display: flex;

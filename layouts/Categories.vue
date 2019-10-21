@@ -3,7 +3,7 @@
     <Profile>
       <FilterVue />
       <!-- 分类集合 -->
-      <ul class="category-wrapper d-flex py-3">
+      <ul class="list-style-none category-wrapper d-flex py-3">
         <li class="category-item" v-for="(item, index) in $categories.list" :key="index">
           <!-- <CateCard :item="item" /> -->
           <router-link class="page-link topic-tag topic-tag-link f6 my-1" :to="{ path: item.path }">{{ item.name }}</router-link>

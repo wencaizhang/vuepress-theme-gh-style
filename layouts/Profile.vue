@@ -1,10 +1,12 @@
 <template>
   <div class>
     <div class="h-card col-lg-3 col-md-4 col-12 float-md-left pr-md-3 pr-xl-6">
-      <img
-        class="avatar width-full height-full avatar-before-user-status"
-        :src="$themeConfig.avatar"
-      />
+      <div class="avatar width-full">
+        <img
+          class="avatar width-full height-full avatar-before-user-status"
+          :src="$themeConfig.avatar"
+        />
+      </div>
       <div class="user-status-container position-relative hide-sm hide-md">
         <div
           class="user-status-container-border-busy p-2 rounded-bottom-1 rounded-top-0 border-top-0 lh-condensed"
@@ -30,7 +32,7 @@
             <div>JavaScript是世界上第二好的语言😏</div>
           </div>
 
-          <ul class="vcard-details mb-3">
+          <ul class="vcard-details mb-3 list-style-none">
             <li
               itemprop="worksFor"
               show_title="false"

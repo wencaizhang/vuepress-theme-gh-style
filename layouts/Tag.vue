@@ -3,7 +3,7 @@
     <Profile>
       <div>
         <FilterVue />
-        <ul id="default-layout" class="d-flex py-3">
+        <ul id="default-layout" class="d-flex py-3 list-style-none">
           <li v-for="tag in $tag.list" :key="tag.name">
             <router-link class="page-link topic-tag topic-tag-link f6 my-1" :to="{ path: tag.path }">{{ tag.name }}</router-link>
           </li>

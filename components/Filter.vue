@@ -22,7 +22,7 @@
     </div>
     <div v-show="clearBtnVisible" class="TableObject border-bottom border-gray-light py-3">
       <div
-        class="user-repo-search-results-summary TableObject-item TableObject-item--primary v-align-top"
+        class=" user-repo-search-results-summary TableObject-item TableObject-item--primary v-align-top"
       >
         <strong>{{ filterResultCount }}</strong>
         results
@@ -31,7 +31,7 @@
         written in
         <strong>{{ filterKey }}</strong>
       </div>
-      <div class="TableObject-item text-right v-align-top">
+      <div class="pr-2 TableObject-item text-right v-align-top">
         <router-link
           class=" text-normal d-inline-block ml-3"
           :to="{path: path}"
