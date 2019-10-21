@@ -1,0 +1,95 @@
+$borderColor = #dfe2e5
+
+.search-box
+  display inline-block
+  position relative
+  width 100%
+  margin-right 0
+  input
+    border-radius 3px
+    background-color hsla(0,0%,100%,.125)
+    border none
+
+    &:focus
+      width 470px
+      background-color #fff
+  .suggestions
+    border-radius 3px
+    border-top-left-radius 0
+    border-top-right-radius 0
+    padding 0
+
+    background #fff
+    width 100%
+    position absolute
+    top 2rem
+    margin-top -2px
+    border 1px solid $borderColor
+
+    list-style-type none
+    &.align-right
+      left 0
+  .suggestion
+    line-height 1.4
+    // padding 0.4rem 0.6rem
+    border-radius 0
+    cursor pointer
+    padding 0
+    border-bottom 1px solid $borderColor
+
+    a
+      display inline-block
+      width 100%
+      padding: 0.8rem 0.6rem;
+
+      white-space normal
+      color #586069
+      &:hover
+        text-decoration none
+      .page-title
+        font-weight 400
+      .header
+        font-size 0.9em
+        margin-left 0.25em
+        
+    &.focused
+      background-color #0366d6
+      a
+        color #fff
+
+@media (max-width: $MQNarrow)
+  .search-box
+    input
+      cursor pointer
+      width 0
+      border-color transparent
+      position relative
+      &:focus
+        cursor text
+        left 0
+        width 10rem
+
+// Match IE11
+@media all and (-ms-high-contrast: none)
+  .search-box input
+    height 2rem
+
+@media (max-width: $MQNarrow) and (min-width: $MQMobile)
+  .search-box
+    .suggestions
+      left 0
+
+@media (max-width: $MQMobile)
+  .search-box
+    margin-right 0
+    input
+      left 1rem
+    .suggestions
+      right 0
+
+@media (max-width: $MQMobileNarrow)
+  .search-box
+    .suggestions
+      width calc(100vw - 4rem)
+    input:focus
+      width 8rem

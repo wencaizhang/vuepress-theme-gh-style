@@ -7,7 +7,7 @@
     </router-link>
   </div>
   <div class="Header-item header-search">
-    <input type="search" class="form-control input-dark header-search-input input-sm" placeholder="Search or Jump to..." />
+    <SearchBox />
   </div>
   <div class="Header-item">
     <router-link class="Header-link" :to="{ path: '/'}">Home</router-link>
@@ -24,21 +24,10 @@
 </div>
 </template>
 
-<style>
-.header-search {
-  min-width: 300px;
-  transition: .2s ease-in-out;
-  transition-property: min-width,padding-bottom,padding-top;
-}
-.header-search-input {
-  display: table-cell;
-  width: 100%;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: inherit;
-  color: inherit;
-  background: none;
-  border: 0;
-  box-shadow: none;
-}
-</style>
+<script>
+  import SearchBox from '@SearchBox'
+
+  export default {
+    components: { SearchBox },
+  }
+</script>

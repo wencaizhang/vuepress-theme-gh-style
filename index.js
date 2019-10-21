@@ -14,6 +14,9 @@ module.exports = (themeConfig, ctx) => {
       ['vuepress-plugin-reading-time', {
         excludes: ['/about', '/tag/.*', '/categories/.*']
       }],
+      ['@vuepress/search', {
+        searchMaxSuggestions: 10
+      }],
       [
         'vuepress-plugin-medium-zoom',
         {
