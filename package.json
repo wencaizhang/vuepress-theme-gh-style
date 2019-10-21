@@ -13,7 +13,8 @@
     "@vuepress/plugin-blog": "latest",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
-    "vuepress": "next"
+    "vuepress": "next",
+    "vuepress-plugin-reading-time": "^0.1.1"
   },
   "dependencies": {
     "@primer/css": "^13.1.0",

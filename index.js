@@ -7,6 +7,9 @@ module.exports = (themeConfig, ctx) => {
   const config = {
     plugins: [
       ['@vuepress/last-updated'],
+      ['vuepress-plugin-reading-time', {
+        excludes: ['/about', '/tag/.*', '/categories/.*']
+      }],
       [
         'vuepress-plugin-medium-zoom',
         {

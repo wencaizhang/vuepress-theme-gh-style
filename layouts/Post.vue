@@ -113,13 +113,30 @@
         <div
           class="Box-body d-flex flex-justify-between flex-items-center flex-auto f6 border-bottom-0 flex-wrap"
         >
-          <span class="pr-md-4 f6 text-mono">
-            categories:
-            <span v-for="(cate, index) in $frontmatter.categories" :key="cate">
-              <span v-if="index !== 0">,</span>
-              <router-link :to="{ path: `/categories/${cate}/` }">{{ cate }}</router-link>
-            </span>
-          </span>
+
+          <ul class="text-mono list-style-none">
+            <li>
+              <span class="pr-md-4 f6 text-mono">
+                categories:
+                <span v-for="(cate, index) in $frontmatter.categories" :key="cate">
+                  <span v-if="index !== 0">,</span>
+                  <router-link :to="{ path: `/categories/${cate}/` }">{{ cate }}</router-link>
+                </span>
+              </span>
+            </li>
+            <li>
+              <span class="pr-md-4 f6 text-mono">
+                tags({{ $page.frontmatter.tags.length }}):
+                <span
+                  v-for="(tag, index) in $frontmatter.tags"
+                  :key="tag"
+                >
+                  <span v-if="index !== 0">,</span>
+                  <router-link :to="{ path: `/tag/${tag}` }">{{ tag }}</router-link>
+                </span>
+              </span>
+            </li>
+          </ul>
 
           <ul class="text-mono list-style-none">
             <li>
@@ -140,14 +157,9 @@
           class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center"
         >
           <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-            tags({{ $page.frontmatter.tags.length }}):
-            <span
-              v-for="(tag, index) in $frontmatter.tags"
-              :key="tag"
-            >
-              <span v-if="index !== 0">,</span>
-              <router-link :to="{ path: `/tag/${tag}` }">{{ tag }}</router-link>
-            </span>
+
+            <!-- 阅读本文大概需要 2.8 分钟 -->
+            阅读本文大概需要：{{ $page.readingTime.text }}
           </div>
 
           <div
