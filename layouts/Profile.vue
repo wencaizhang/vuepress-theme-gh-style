@@ -4,7 +4,7 @@
       <div class="avatar width-full">
         <img
           class="avatar width-full height-full avatar-before-user-status"
-          :src="$themeConfig.avatar"
+          :src="avatar"
         />
       </div>
       <div class="user-status-container position-relative hide-sm hide-md">
@@ -166,8 +166,18 @@
 import PostItem from "@theme/components/PostItem";
 export default {
   components: { PostItem },
+  data () {
+    return {
+      avatar: '',
+    }
+  },
   created () {
     console.log(this.$route.query);
+    console.log(AVATAR);
+    this.avatar = AVATAR;
+  },
+  methods: {
+    
   }
 };
 </script>

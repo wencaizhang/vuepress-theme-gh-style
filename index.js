@@ -1,3 +1,8 @@
+function getRandomAvatar () {
+  let n = Math.ceil((Math.random() * 25))
+  return `https://gitee.com/wencaizhang_admin/images/raw/master/github-avatar/avatar${n}.webp`
+}
+
 module.exports = (themeConfig, ctx) => {
   const config = {
     plugins: [
@@ -42,7 +47,7 @@ module.exports = (themeConfig, ctx) => {
       // 变量可以直接在组件中使用
       THEME_BLOG_PAGINATION_COMPONENT: themeConfig.paginationComponent
         ? themeConfig.paginationComponent
-        : 'Pagination'
+        : 'Pagination',
 
       // 页码有两种格式，一种是完整的页码，一种是只有上一页下一页的简单页码
 
@@ -52,6 +57,8 @@ module.exports = (themeConfig, ctx) => {
         
       // }
       // ```
+
+      AVATAR: themeConfig.avatar || getRandomAvatar()
     }
   }
 
