@@ -74,4 +74,10 @@
 .footer-copyright > * {
   margin: 2px;
 }
+.footer-octicon {
+  color: #c6cbd1;
+}
+.footer-octicon:hover {
+  color: #959da5;
+}
 </style>
