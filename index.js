@@ -7,6 +7,7 @@ module.exports = (themeConfig, ctx) => {
   const config = {
     plugins: [
       ['@vuepress/last-updated'],
+      ['vuepress-plugin-smooth-scroll'],
       ['vuepress-plugin-nprogress'],
       ['vuepress-plugin-container', { type: 'tip' }],
       ['vuepress-plugin-container', { type: 'warning' }],

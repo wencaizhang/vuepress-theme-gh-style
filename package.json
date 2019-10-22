@@ -16,7 +16,8 @@
     "vuepress": "next",
     "vuepress-plugin-container": "^2.1.0",
     "vuepress-plugin-nprogress": "^1.1.4",
-    "vuepress-plugin-reading-time": "^0.1.1"
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "vuepress-plugin-smooth-scroll": "^0.0.7"
   },
   "dependencies": {
     "@primer/css": "^13.1.0",
