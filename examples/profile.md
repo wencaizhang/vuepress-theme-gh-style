@@ -1,5 +1,5 @@
 ---
-layout: Profile
+
 ---
 
 # fff

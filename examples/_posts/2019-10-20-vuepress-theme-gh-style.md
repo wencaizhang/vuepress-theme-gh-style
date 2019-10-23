@@ -3,17 +3,26 @@ tags:
   - vue
   - vuepress
 categories: 
-  - test1
-  - test2
-category: VuePress
+  - vue
 ---
 
-# Intro to VuePress
+
+# vuepress 博客主题 gh-style
 
 - Intro to VuePress
 - Intro to VuePress
 - Intro to VuePress
 
+```js
+export default = {
+  head: [
+    ['link', {
+      rel: 'icon',
+      href: 'https://gitee.com/wencaizhang_admin/images/raw/master/primary/js.jpg'
+    }],
+  ],
+}
+```
 
 <!-- more -->
 
