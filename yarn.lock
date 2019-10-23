@@ -4537,6 +4537,11 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+medium-zoom@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.4.tgz#b1063093f81151a19989489589edf28e6090630c"
+  integrity sha512-BjE+00gQku3XQfgHDcqyYwQaBtFddzh6Lnj1RZOliqJ9HS0mh/P2IaqVJ25/j9EbnjAUf27mLeLZBRxnd00bfA==
+
 mem@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-4.3.0.tgz#461af497bc4ae09608cdb2e60eefb69bff744178"
@@ -6053,6 +6058,11 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
+reading-time@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/reading-time/-/reading-time-1.1.3.tgz#47de143074245be6f65e2b3c9b63b78d9ab8ec7a"
+  integrity sha512-SYy+cuoGy1MTLjIbgwTZ+DkDiDq/dE1OnqBQFYytXgNWRZROuqtBdu7HoJ+HbGMnoAinOHnHnqbEUYnpSho5aA==
+
 redent@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/redent/-/redent-1.0.0.tgz#cf916ab1fd5f1f16dfb20822dd6ec7f730c2afde"
@@ -6541,6 +6551,11 @@ slash@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
+
+smoothscroll-polyfill@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
+  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7494,6 +7509,41 @@ vuepress-plugin-container@^2.0.0:
   integrity sha512-SMlWJl0uZYkqAxD2RUZmIrANZWKgiZdM64K7WmdyHyQPYI+NUj3ugi5D+zDn62BoO9NfQTiskEIa2u619SRweA==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-container@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-2.1.0.tgz#eb2ba3e01cdac419bd678d40e05c934caffe6db0"
+  integrity sha512-i4p7S1cqYUrg/3pt+xSghZtKSHVI3VXMQNept8ILxA+lMK1XJkdRkjNovZzwpXlrErQssvrUOTWBV0hdBv7eXQ==
+  dependencies:
+    markdown-it-container "^2.0.0"
+
+vuepress-plugin-medium-zoom@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-medium-zoom/-/vuepress-plugin-medium-zoom-1.1.6.tgz#3908bd22c55bfe5a990e208949b8c809000e96df"
+  integrity sha512-R9fPVMglQC44NZybJHcc7vwRetDpJAmPVQRUUQoN56IR8IuO9ye3Bv0UPf50kmuPd+oHCUVFnM+sXaOZiJcXDQ==
+  dependencies:
+    medium-zoom "^1.0.4"
+
+vuepress-plugin-nprogress@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-nprogress/-/vuepress-plugin-nprogress-1.1.4.tgz#63350d8521ff6c3f27bcc03ec6a7d496f3b70c07"
+  integrity sha512-z9Wbh9j0Muv54xdel4Ybc1BCuyXHAwO5U0NrKNBjd2WHQFavozOcxTgr4SVDbAHOKEJPTy8uUgY72mm7p8mfZQ==
+  dependencies:
+    nprogress "^0.2.0"
+
+vuepress-plugin-reading-time@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-time/-/vuepress-plugin-reading-time-0.1.1.tgz#3ea3dcded424a00c1d5175a50af8d5694899f1ea"
+  integrity sha512-j94utmn4nojYWyOVqfUF3eLWOMTAmZpR0G1gUlmast6KFu/VLevJvxFgJfa6DVaSlTpUH1DMLYspcjLv5pHhDw==
+  dependencies:
+    reading-time "1.1.3"
+
+vuepress-plugin-smooth-scroll@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.7.tgz#ee0dc4b76eb487b115ae95049a5d749b581b8439"
+  integrity sha512-VbLl4AFoLypylCGN0PHO7X+wSjWPKGccaE91DjooXVCsXs6DadzDZCpXSIlQ1WJf/uu9Pi40l3e33FNtt7xu2Q==
+  dependencies:
+    smoothscroll-polyfill "^0.4.4"
 
 vuepress@next:
   version "1.0.0-rc.1"
