@@ -15,8 +15,7 @@
 
 <script>
 import FilterVue from "@theme/components/Filter";
-import Profile from "./Profile";
-
+import Profile   from "./Profile";
 
 export default {
   components: { FilterVue, Profile },

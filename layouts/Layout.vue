@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import PostItem from "@theme/components/PostItem";
+import PostItem   from "@theme/components/PostItem";
 import Pagination from "@theme/components/Pagination";
-import FilterVue from "@theme/components/Filter";
+import FilterVue  from "@theme/components/Filter";
 
 import Profile from "./Profile";
 
