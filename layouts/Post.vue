@@ -17,22 +17,22 @@
             <router-link class="social-count" :to="{ path: '/' }">{{ postLength }}</router-link>
           </li>
           <li>
-            <router-link class="btn btn-sm btn-with-count" :to="{ path: '/tag/' }">Tags</router-link>
-            <router-link class="social-count" :to="{ path: '/tag/' }">{{ $tag.length }}</router-link>
-          </li>
-          <li>
             <router-link class="btn btn-sm btn-with-count" :to="{ path: '/categories/' }">Categories</router-link>
             <router-link
               class="social-count"
               :to="{ path: '/categories/' }"
             >{{ $categories.length }}</router-link>
           </li>
+          <li>
+            <router-link class="btn btn-sm btn-with-count" :to="{ path: '/tag/' }">Tags</router-link>
+            <router-link class="social-count" :to="{ path: '/tag/' }">{{ $tag.length }}</router-link>
+          </li>
         </ul>
       </div>
 
       <div class="container-lg px-3">
         <nav class="reponav clearfix" role="navigation">
-          <a class="reponav-item selected" href="#url">
+          <a class="reponav-item selected" href="javascript:;">
             <!-- <%= octicon("code") %> -->
             <svg
               class="octicon octicon-code"
@@ -207,10 +207,8 @@
   </div>
 </template>
 
-
-
 <script>
-import Sidebar         from '@theme/components/Sidebar';
+import Sidebar     from '@theme/components/Sidebar';
 import RawLink     from "@theme/components/RawLink";
 import BlameLink   from "@theme/components/BlameLink";
 import HistoryLink from "@theme/components/HistoryLink";
