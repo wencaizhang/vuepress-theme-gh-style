@@ -9,14 +9,21 @@ In fact, this project is a classic use case for the [official vuepress blog plug
 
 
 ## Features
-  
+
 All of following features are out-of-box:
 
-- Blogging Convention
-- Blog-Styled Permalinks
-- Pagination
-- Frontmatter-Based Tag Classification
-
+- 文章阅读时长
+- 顶部进度条
+- markdown自定义容器
+- 上一篇、下一篇
+- 图片支持点击缩放
+- 阅读模式
+  + 全屏阅读
+  + 聚焦阅读,(TODO)
+  + 临时阅读模式,(TODO)
+-  文章目录,(TODO)
+- 评论系统,(TODO)
+- PWA
 
 ## License
 
