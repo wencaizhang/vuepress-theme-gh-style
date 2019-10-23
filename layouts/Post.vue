@@ -190,7 +190,7 @@
     </div>
 
 
-    <Toc />
+    <Sidebar />
     <!-- TODO -->
     <!-- <div class="container-lg px-3 mt-3 position-relative">
 
@@ -210,12 +210,12 @@
 
 
 <script>
-import Toc         from '@theme/components/Toc';
+import Sidebar         from '@theme/components/Sidebar';
 import RawLink     from "@theme/components/RawLink";
 import BlameLink   from "@theme/components/BlameLink";
 import HistoryLink from "@theme/components/HistoryLink";
 export default {
-  components: { Toc, RawLink, BlameLink, HistoryLink },
+  components: { Sidebar, RawLink, BlameLink, HistoryLink },
   data() {
     return {
       recommendCouter: 0,
