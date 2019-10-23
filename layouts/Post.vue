@@ -298,6 +298,9 @@ export default {
 </script>
 
 <style lang="scss">
+.markdown-body {
+  overflow: scroll;
+}
 .repohead-details-container {
   display: flex;
   justify-content: space-between;
