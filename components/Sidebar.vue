@@ -117,10 +117,12 @@ export default {
       };
     }
   },
+  beforeDestroy() {
+    document.querySelector("body").style.marginLeft = 0;
+  },
   methods: {
     onMouseenterToggle () {
       this.visible = true;
-      console.log('true');
     },
     onMouseenter () {
       console.log('onMouseenter');
@@ -135,7 +137,7 @@ export default {
     togglePined() {
       this.pined = !this.pined;
       this.visible = this.pined;
-      document.querySelector("body").style.marginLeft = this.pined ? "304px" : 0;
+      document.querySelector("body").style.marginLeft = this.pined ? "220px" : 0;
     },
     handleSetting() {}
   },
@@ -148,8 +150,8 @@ export default {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 304px;
-  margin-left: -304px;
+  width: 220px;
+  margin-left: -220px;
   height: 100%;
   box-sizing: border-box;
   background-color: #fff;
@@ -205,7 +207,7 @@ export default {
     padding-right: 65px;
     font-size: 14px;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
     background-color: rgb(55, 62, 67);
     -webkit-box-align: center;
     align-items: center;
