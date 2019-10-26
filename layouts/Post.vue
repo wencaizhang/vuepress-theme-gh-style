@@ -288,19 +288,16 @@ export default {
         docElm.webkitRequestFullScreen ||
         docElm.msRequestFullscreen;
       // 网页全屏
-      // if (requestEvent) requestEvent.bind(docElm)()
+      if (requestEvent) requestEvent.bind(docElm)()
 
-      // 文章全屏
-      if (requestEvent) this.$refs.article.requestFullscreen();
+      // 文章全屏，文章全屏存在 bug
+      // if (requestEvent) this.$refs.article.requestFullscreen();
     }
   }
 };
 </script>
 
 <style lang="scss">
-.markdown-body {
-  overflow: scroll;
-}
 .repohead-details-container {
   display: flex;
   justify-content: space-between;
