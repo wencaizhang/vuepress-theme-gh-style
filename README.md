@@ -1,18 +1,10 @@
-# 70-lines-of-vuepress-blog-theme
+# vuepress-theme-gh-style
 
-A VuePress Blog Theme implemented in around 70 lines.
-
-
-## Motivation
-
-In fact, this project is a classic use case for the [official vuepress blog plugin](https://github.com/ulivz/vuepress-plugin-blog). This project aims to minimize the cost of developing a vuepress blog theme, so that developers only care about the implementation of the theme style, without paying attention to the underlying details of the complex implementation.
-
+:octocat: 一个 GitHub 风格的 vuepress 博客主题
 
 ## Features
 
-All of following features are out-of-box:
-
-- 文章阅读时长
+- 预估文章阅读时长
 - 顶部进度条
 - markdown自定义容器
 - 上一篇、下一篇
@@ -21,10 +13,10 @@ All of following features are out-of-box:
   + 全屏阅读
   + 聚焦阅读,(TODO)
   + 临时阅读模式,(TODO)
--  文章目录,(TODO)
+-  文章目录
 - 评论系统,(TODO)
 - PWA
 
 ## License
 
-MIT · ULIVZ
+MIT · wencaizhang
