@@ -1,14 +1,25 @@
 {
-  "name": "70-lines-of-vuepress-blog-theme",
-  "version": "1.0.0",
+  "name": "vuepress-theme-gh-style",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "https://github.com/ulivz/40-lines-of-vuepress-blog-theme.git",
-  "author": "ULIVZ <chl814@foxmail.com>",
+  "description": "vuepress blog theme - Github style replication for vuepress blog theme",
+  "repository": "https://github.com/wencaizhang/vuepress-theme-gh-style.git",
+  "author": "wencaizhang <1052642137@qq.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev examples",
     "build": "vuepress build examples"
   },
+  "homepage": "https://github.com/wencaizhang/vuepress-theme-gh-style",
+  "bugs": {
+    "url": "https://github.com/wencaizhang/vuepress-theme-gh-style/issues"
+  },
+  "keywords": [
+    "Github style",
+    "blog",
+    "theme",
+    "vuepress"
+  ],
   "devDependencies": {
     "@vuepress/plugin-blog": "latest",
     "node-sass": "^4.12.0",
