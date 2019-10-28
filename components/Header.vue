@@ -627,7 +627,7 @@ export default {
   components: { SearchBox },
   methods: {
     onClickNotice() {
-      window.alert("想得美");
+      window.alert("想得美 😝");
     }
   }
 };

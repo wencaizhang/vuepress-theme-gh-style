@@ -62,10 +62,9 @@ export default {
 .social-media-list li {
   list-style: none;
 }
-.social-media-list {
-  /* display: flex;
-  justify-content: space-between; */
-}
+/* .social-media-list {
+
+} */
 .social-media-item {
   display: inline-block;
   height: 35px;
