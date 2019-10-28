@@ -11,7 +11,7 @@
         <li class="mr-3">
           <router-link :to="$site.base">Home</router-link>
         </li>
-        <li class="mr-3">
+        <!-- <li class="mr-3">
           <a
             data-ga-click="Footer, go to privacy, text:privacy"
             href="https://github.com/site/privacy"
@@ -31,14 +31,15 @@
         </li>
         <li>
           <a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a>
-        </li>
+        </li> -->
       </ul>
 
       <a
         aria-label="Homepage"
         title="GitHub"
         class="footer-octicon d-none d-lg-block mx-lg-4"
-        href="https://github.com"
+        target="_blank"
+        :href="$themeConfig.github"
       >
         <svg
           height="24"

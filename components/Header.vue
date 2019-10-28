@@ -4,7 +4,7 @@
       <router-link :to="{ path: '/'}" class="Header-link f4 d-flex flex-items-center">
         <svg
           height="32"
-          class="octicon octicon-mark-github mr-2"
+          class="octicon octicon-mark-github"
           viewBox="0 0 16 16"
           version="1.1"
           width="32"
@@ -36,7 +36,7 @@
 
     <div class="Header-item mr-0 mr-lg-3 flex-order-1 flex-lg-order-none">
       <a
-        aria-label="你想要体验一下 AR 阅读模式吗"
+        aria-label="去体验 AR 阅读模式！"
         class="Header-link notification-indicator position-relative tooltipped tooltipped-s js-socket-channel js-notification-indicator"
         @click="onClickNotice"
         href="javascript:;"
@@ -613,23 +613,7 @@
             href="javascript:;"
             data-ga-click="Header, go to settings, icon:settings"
           >Settings</a>
-          <!-- '"` -->
-          <!-- </textarea></xmp> -->
-          <form class="logout-form" action="/logout" accept-charset="UTF-8" method="post">
-            <input name="utf8" type="hidden" value="✓" />
-            <input
-              type="hidden"
-              name="authenticity_token"
-              value="SjCJqaHJ0s+q0Wz4kzPC5iBxe7yZTqV3GCXSG2g2Pas1A/+8syQs4wtqLQmeguK9sLWeCcSZazV5XX7+dzen4Q=="
-            />
 
-            <button
-              type="submit"
-              class="dropdown-item dropdown-signout"
-              data-ga-click="Header, sign out, icon:logout"
-              role="menuitem"
-            >Sign out</button>
-          </form>
         </div>
       </details>
     </div>

@@ -81,7 +81,7 @@ module.exports = (themeConfig, ctx) => {
       // }
       // ```
 
-      AVATAR: themeConfig.avatar || getRandomAvatar()
+      AVATAR: themeConfig.profile.avatar || getRandomAvatar()
     }
   }
 
