@@ -4,7 +4,7 @@
     @mouseleave="onMouseleaveSidebar"
     :class="sidebarClass"
   >
-    <div 
+    <div
       @mouseenter.stop="onMouseenterToggle"
       @mouseleave.stop
       class="toc-toggle d-flex flex-column flex-justify-center flex-items-center"
@@ -117,6 +117,11 @@ export default {
       };
     }
   },
+  mounted () {
+    let pined = window.localStorage.getItem('pined')
+    this.visible = this.pined = !!pined;
+    this.setMargin();
+  },
   beforeDestroy() {
     document.querySelector("body").style.marginLeft = 0;
   },
@@ -137,9 +142,13 @@ export default {
     togglePined() {
       this.pined = !this.pined;
       this.visible = this.pined;
+      window.localStorage.setItem('pined', Number(this.pined));
+      this.setMargin();
+    },
+    handleSetting() {},
+    setMargin () {
       document.querySelector("body").style.marginLeft = this.pined ? "220px" : 0;
     },
-    handleSetting() {}
   },
 };
 </script>
