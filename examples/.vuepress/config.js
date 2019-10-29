@@ -17,6 +17,11 @@ module.exports = {
       repo: 'vuepress-theme-gh-style',
       branch: 'master/examples',
     },
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Categories', link: '/categories/' },
+      { text: 'Tags', link: '/tag/' },
+    ],
     profile: {
       avatar: 'https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png',
       location: 'Beijing',
@@ -26,11 +31,29 @@ module.exports = {
       github: 'https://github.com/wencaizhang',
       bio: 'JavaScript是世界上第一好的语言😏',
       social: {
-        github: 'https://github.com/wencaizhang',
-        weibo: 'https://weibo.com/u/3013567744',
-        zhihu: 'https://www.zhihu.com',
-        twitter: '',
+        github: {
+          account: 'wencaizhang',
+          link: 'https://github.com/wencaizhang',
+        },
+
+        // 新浪微博 帐号和链接
+        weibo: {
+          account: 'wencai0901',
+          link: 'https://weibo.com/u/3013567744',
+        },
       },
-    }
+    },
+    // 底部 footer 的相关设置 (可选)
+    footer: {
+      // 是否显示 Powered by VuePress
+      poweredBy: true,
+
+      // 是否显示使用的主题
+      poweredByTheme: true,
+
+      beian: '沪ICP备ssss号',
+      // 添加自定义 footer (支持 HTML)
+      // custom: 'Copyright 2018-present <a href="https://github.com/wencaizhang" target="_blank">wencaizhang</a> | MIT License',
+    },
   }
 }
