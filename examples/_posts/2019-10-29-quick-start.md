@@ -1,5 +1,6 @@
 ---
 title: 快速开始
+date: "2019-10-29"
 tags: 
   - vue
   - vuepress
@@ -7,6 +8,15 @@ tags:
 categories: 
   - vuepress
 ---
+
+基于 vuepress 的博客主题 vuepress-theme-gh-style 使用指南。
+
+:::tip
+
+如果你在使用这个主题时遇到问题，或者有什么好主意，可以在 Github 仓库 发表 Issue 或者 PR 。
+
+觉得这个主题还不错的话，给一个 Star 支持一下吧 😉
+:::
 
 ## 开始使用
 
@@ -76,13 +86,14 @@ yarn docs:build # 或者：npm run docs:build
 
 ## 导航栏链接
 
-
+导航以对象数组形式进行配置，对象主要有 text 和 link 两个属性，分别对应页面导航的文本和链接地址。
 
 如果是外部链接请将 `external` 属性设置为 `true`，否则将按照内部链接处理。
 
 外部链接 `<a>` 标签的特性将默认包含 `target="_blank" rel="noopener noreferrer"`，你可以提供 `target` 与 `rel`，它们将被作为特性被增加到 `<a>` 标签上：
 
 ps: *由于是 GitHub 风格主题，因此导航栏暂不支持下拉列表*。
+
 ```js
 // .vuepress/config.js
 module.exports = {
@@ -99,18 +110,37 @@ module.exports = {
 
 ## 最后更新时间
 
+你可以通过 `themeConfig.lastUpdated` 选项来获取每个文件最后一次 `git` 提交的 `UNIX` 时间戳(`ms`)，同时它将以合适的日期格式显示在每一页的底部：
+
 ```js
+// .vuepress/config.js
 module.exports = {
   themeConfig: {
-    lastUpdated: 'Last Updated', // string | boolean
+    // string | boolean
+    lastUpdated: true, // 开启显示，默认前缀是 `Last Updated`
+    // or
+    lastUpdated: false, // 关闭显示
+    // or
+    lastUpdated: 'Last Updated', // 也可以直接给定字符串，此时自动开启显示
+    // or
+    lastUpdated: '上次更新时间',
   }
 }
 ```
+
+请注意，`themeConfig.lastUpdated` 默认是关闭的，如果给定一个字符串，它将会作为前缀显示（默认值是：`Last Updated`）。
+
+::: tip 使用须知
+由于 `lastUpdated` 是基于 `git` 的, 所以你只能在一个基于 `git` 的项目中启用它。此外，由于使用的时间戳来自 `git commit`，因此它将仅在给定页的第一次提交之后显示，并且仅在该页面后续提交更改时更新。
+
+另外还可以指定时间格式，参见 [@vuepress/plugin-last-updated](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-last-updated.html)
+:::
 
 ## 个人信息展示
 
 
 ```js
+// .vuepress/config.js
 module.exports = {
   themeConfig: {
     // 个人信息（没有或不想设置的，注释或删掉或设为空对应字段即可）
@@ -153,6 +183,7 @@ module.exports = {
 除此之外，还支持更多平台：`Facebook`, `LinkedIn`, `Twitter`, `知乎`, `豆瓣`, `Reddit`, `Medium`, `Instagram`, `GitLab`, `Bitbucket`, `Docker`, `CSDN`, `掘金` 等等。
 
 ```js
+// .vuepress/config.js
 module.exports = {
   themeConfig: {
     // 个人信息（没有或不想设置的，注释或删掉或设为空对应字段即可）
@@ -179,6 +210,7 @@ module.exports = {
 ## 底部 footer 设置
 
 ``` js
+// .vuepress/config.js
 module.exports = {
   themeConfig: {
     // 底部 footer 的相关设置 (可选)
@@ -207,8 +239,7 @@ module.exports = {
 <summary>点击展开配置示例</summary>
 
 ```js
-// .vuepress/config.js
-
+// .vuepress/config.j
 module.exports = {
   // 网站 Title
   title: 'My Blog',

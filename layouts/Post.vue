@@ -212,6 +212,7 @@ import Sidebar     from '@theme/components/Sidebar';
 import RawLink     from "@theme/components/RawLink";
 import BlameLink   from "@theme/components/BlameLink";
 import HistoryLink from "@theme/components/HistoryLink";
+import format from 'date-fns/format'
 export default {
   components: { Sidebar, RawLink, BlameLink, HistoryLink },
   data() {
@@ -222,14 +223,21 @@ export default {
   },
   computed: {
     createdText() {
-      return "created";
+      if (typeof this.$themeLocaleConfig.created === "string") {
+        return this.$themeLocaleConfig.created;
+      }
+      if (typeof this.$themeConfig.created === "string") {
+        return this.$themeConfig.created;
+      }
+      return "Created";
     },
     createdDate() {
-      console.log(this.$page);
       return this.$frontmatter.date;
+      // return format(this.$frontmatter.date, 'YYYY-MM-DD');
     },
     lastUpdated() {
       return this.$page.lastUpdated;
+      // return format(this.$page.lastUpdated, 'YYYY-MM-DD');
     },
     lastUpdatedText() {
       if (typeof this.$themeLocaleConfig.lastUpdated === "string") {
