@@ -7,7 +7,7 @@
       v-for="(item, index) in $page.headers"
       :key="index"
     >
-      <a :href="`#${item.slug}`" :title="item.title">{{ item.title }}</a>
+      <a class="sidebar-link" :href="`#${item.slug}`" :title="item.title">{{ item.title }}</a>
     </div>
     <div v-if="!visible">
       暂无目录

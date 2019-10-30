@@ -21,6 +21,7 @@
     "vuepress"
   ],
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "@vuepress/plugin-blog": "latest",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
