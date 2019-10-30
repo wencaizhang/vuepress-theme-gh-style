@@ -14,6 +14,9 @@
             © 2019
             <span title="0.59632s from unicorn-5df5cbdbbd-9fvbv">GitHub</span>, Inc.
           </li>
+          <li v-if="$themeConfig.footer.beian" class="mr-3">
+            <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">{{ $themeConfig.footer.beian }}</a>
+          </li>
           <li class="mr-3">
             <router-link :to="$site.base">Home</router-link>
           </li>
@@ -55,7 +58,7 @@
     </div>
 
     <div class="f6">
-      <a v-if="$themeConfig.footer.beian" href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">{{ $themeConfig.footer.beian }}</a>
+      
     </div>
   </div>
 </template>

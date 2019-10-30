@@ -51,7 +51,7 @@ module.exports = {
       // 是否显示使用的主题
       poweredByTheme: true,
 
-      beian: '沪ICP备ssss号',
+      beian: '沪ICP备xxx号',
       // 添加自定义 footer (支持 HTML)
       // custom: 'Copyright 2018-present <a href="https://github.com/wencaizhang" target="_blank">wencaizhang</a> | MIT License',
     },
