@@ -6,48 +6,74 @@ tags:
   - vuepress
   - blog
 categories: 
-  - vuepress
+  - blog
 ---
 
 基于 vuepress 的博客主题 vuepress-theme-gh-style 使用指南。
 
-:::tip
+::: tip 写在前面的话
 
-如果你在使用这个主题时遇到问题，或者有什么好主意，可以在 Github 仓库 发表 Issue 或者 PR 。
+如果你在使用这个主题时遇到问题，或者有什么好主意，可以在 <GitHubLink repo="wencaizhang/vuepress-theme-gh-style" /> [GitHub 仓库](https://github.com/wencaizhang/vuepress-theme-gh-style) 发表 Issue 或者 PR。
 
-觉得这个主题还不错的话，给一个 Star 支持一下吧 😉
+如果觉得这个主题还不错的话，给一个 Star 支持一下吧 😉
 :::
 
-## 开始使用
-
-### 安装
+## Step 1: 创建 vuepress 项目
 
 新建一个项目 `my-blog` :
 
 ```bash
-mkdir my-blog
-cd my-blog
+mkdir my-blog && cd my-blog
 ```
 
-安装 `vuepress` 和 `vuepress-theme-gh-style` :
+
+将 `vuepress` 安装为本地依赖：
 
 ```bash
-npm init -y
-npm install vuepress vuepress-theme-meteorlxy \
---registry=https://registry.npm.taobao.org
+# 将 VuePress 作为一个本地依赖安装
+yarn add -D vuepress # 或者：npm install -D vuepress
+
+# 新建一个 docs 文件夹
+mkdir docs
+
+# 新建一个 markdown 文件
+echo '# Hello VuePress!' > docs/README.md
+
+# 启动本项目，即可看到一个基本的 vuepress 项目
+npx vuepress dev docs
 ```
 
-创建一个目录用于保存配置文件和文章源文件：
+为了后续过程中方便执行脚本，将脚本添加到 `package.json` 里:
+
+```json
+{
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
+```
+
+
+
+## Step 2: 添加主题
+
+安装博客主题 `vuepress-theme-gh-style`:
 
 ```bash
-mkdir src
+yarn add -D vuepress-theme-gh-style
+# 或者：npm install -D vuepress-theme-gh-style
 ```
+
+
+
+
 
 项目结构大致为：
 
 ```bash
 my-blog
-├── src # Blog 源文件目录
+├── docs # Blog 源文件目录
 │   ├── .vuepress # Vuepress 目录
 │   │   └── config.js # Vuepress 配置文件
 │   └── _posts # 博客文件夹
@@ -56,16 +82,6 @@ my-blog
 └── package.json
 ```
 
-接着，在 package.json 里加一些脚本:
-
-```json
-{
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  }
-}
-```
 
 然后就可以开始写作了:
 
@@ -73,18 +89,10 @@ my-blog
 yarn docs:dev # 或者：npm run docs:dev
 ```
 
-要生成静态的 HTML 文件，运行：
 
-```bash
-yarn docs:build # 或者：npm run docs:build
-```
+## Step 3: 配置主题
 
-默认情况下，文件将会被生成在 `.vuepress/dist`，当然，你也可以通过 `.vuepress/config.js` 中的 `dest` 字段来修改，生成的文件可以部署到任意的静态文件服务器上，参考 部署 来了解更多。
-
-
-## 配置主题
-
-## 导航栏链接
+### 导航栏链接
 
 导航以对象数组形式进行配置，对象主要有 text 和 link 两个属性，分别对应页面导航的文本和链接地址。
 
@@ -108,7 +116,7 @@ module.exports = {
 }
 ```
 
-## 最后更新时间
+### 最后更新时间
 
 你可以通过 `themeConfig.lastUpdated` 选项来获取每个文件最后一次 `git` 提交的 `UNIX` 时间戳(`ms`)，同时它将以合适的日期格式显示在每一页的底部：
 
@@ -136,7 +144,7 @@ module.exports = {
 另外还可以指定时间格式，参见 [@vuepress/plugin-last-updated](https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-last-updated.html)
 :::
 
-## 个人信息展示
+### 个人信息展示
 
 
 ```js
@@ -176,7 +184,7 @@ module.exports = {
 ```
 
 
-## 社交账号展示
+### 社交账号展示
 
 这里以 GitHub 和新浪微博为例，每个社交平台应当有 `account` 和 `link` 两个值，分别对应昵称和个人主页链接。
 
@@ -207,7 +215,7 @@ module.exports = {
 }
 ```
 
-## 底部 footer 设置
+### 底部 footer 设置
 
 ``` js
 // .vuepress/config.js
@@ -230,7 +238,7 @@ module.exports = {
 }
 ```
 
-## 完整配置示例
+### 完整配置示例
 
 `src/.vuepress/config.js` 的完整示例如下：
 
@@ -415,3 +423,50 @@ module.exports = {
 ```
 
 </details>
+
+## Step 4: 创建文章，开始写作
+
+在 `docs` 目录下创建 `_posts` 目录，用于放置所有的文章源文件（md文件）
+
+```bash
+cd docs && mkdir _posts
+```
+
+创建文章
+
+```bash
+touch _posts/my-first-post.md
+```
+
+接下来，你可以使用任意的编辑器来开始你的第一篇文章（我使用 VsCode）。
+
+哦差点忘记，在每一篇文章的开头，你都应该写上对应都 Front Matter，用于提供本篇文章的一些信息。
+
+```
+---
+title: my-first-post
+lang: en-US
+date: 2019-11-04 18:25:00
+tag:
+  - tag1
+  - tag2
+categories: 
+  - blog
+---
+```
+
+[Front Matter](https://v1.vuepress.vuejs.org/zh/guide/frontmatter.html#front-matter)
+
+## Step 5: 构建静态网站
+
+
+要生成静态的 HTML 文件，运行：
+
+```bash
+yarn docs:build # 或者：npm run docs:build
+```
+
+默认情况下，文件将会被生成在 `.vuepress/dist`，当然，你也可以通过 `.vuepress/config.js` 中的 `dest` 字段来修改，生成的文件可以部署到任意的静态文件服务器上。
+
+
+VuePress 文档中已经详细介绍了各种部署方案，不再赘述，请参考[部署](https://v1.vuepress.vuejs.org/zh/guide/deploy.html) 。
