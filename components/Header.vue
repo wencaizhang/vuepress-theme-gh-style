@@ -19,7 +19,7 @@
     </div>
 
     <div class="Header-item Header-item--full">
-      <div class="Header-item header-search">
+      <div class="Header-item header-search d-none d-lg-flex">
         <SearchBox />
       </div>
       <div

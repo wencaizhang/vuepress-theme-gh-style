@@ -57,8 +57,8 @@
       </template>
     </div>
 
-    <div class="f6">
-      
+    <div class="d-flex flex-justify-center pb-6">
+      <span class="f6 text-gray-light"></span>
     </div>
   </div>
 </template>

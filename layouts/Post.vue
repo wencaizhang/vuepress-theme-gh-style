@@ -1,9 +1,9 @@
 <template>
   <div class="width-full">
     <div
-      class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4"
+      class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav"
     >
-      <div class="repohead-details-container container">
+      <div class="repohead-details-container container-lg  px-3">
         <h1 class="public">
           <span class="author">
             <router-link class="url fn" rel="author" :to="{ path: '/' }">{{ $site.title }}</router-link>
@@ -11,7 +11,7 @@
           <!-- <span class="path-divider">/</span>
           <strong>{{ $page.title }}</strong>-->
         </h1>
-        <ul class="pagehead-actions list-style-none">
+        <ul class="pagehead-actions list-style-none pt-lg-4">
           <li>
             <router-link class="btn btn-sm btn-with-count" :to="{ path: '/' }">Posts</router-link>
             <router-link class="social-count" :to="{ path: '/' }">{{ postLength }}</router-link>
@@ -102,7 +102,7 @@
           <div>
             <span class="author" rel="author">author: {{ $themeConfig.author }}</span>
           </div>
-          <ul class="list-style-none">
+          <ul class="list-style-none f6">
             <li class="last-updated" v-if="createdDate">
               <span class="prefix">{{ createdText }}:</span>
               <span class="time">{{ createdDate }}</span>
@@ -180,7 +180,7 @@
           <article
             style="background: #fff;"
             ref="article"
-            class="markdown-body entry-content p-5"
+            class="markdown-body entry-content p-lg-5"
             itemprop="text"
           >
             <Content />
@@ -212,7 +212,7 @@ import Sidebar     from '@theme/components/Sidebar';
 import RawLink     from "@theme/components/RawLink";
 import BlameLink   from "@theme/components/BlameLink";
 import HistoryLink from "@theme/components/HistoryLink";
-import format from 'date-fns/format'
+// import format from 'date-fns/format'
 export default {
   components: { Sidebar, RawLink, BlameLink, HistoryLink },
   data() {
@@ -322,15 +322,14 @@ export default {
 
   li {
     margin: 0 0 0 10px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
 // ------------------------------
-.container {
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 
 .repohead.experiment-repo-nav {
   padding-bottom: 0;

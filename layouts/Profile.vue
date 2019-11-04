@@ -1,9 +1,9 @@
 <template>
-  <div class>
-    <div class="h-card col-lg-3 col-md-4 col-12 float-md-left pr-md-3 pr-xl-6">
+  <div class="d-flex">
+    <div class="d-none d-lg-flex flex-column h-card col-lg-3 col-12  pr-md-3 pr-xl-6">
       <div class="avatar width-full">
         <img
-          class="avatar width-full height-full avatar-before-user-status"
+          class="width-full avatar-before-user-status"
           :src="avatar"
         />
       </div>
@@ -127,7 +127,7 @@
         <SocialMedia />
       </div>
     </div>
-    <div class="col-lg-9 col-md-8 col-12 float-md-left pl-md-2">
+    <div class="col-lg-9 col-md-12 col-12 pl-md-2">
       <nav class="UnderlineNav">
         <div class="UnderlineNav-body">
           <router-link
@@ -191,8 +191,8 @@ export default {
 
 <style scoped>
 .avatar {
-  width: 260px;
-  height: 260px;
+  /* width: 260px;
+  height: 260px; */
 }
 @media (min-width: 768px) {
   .avatar-before-user-status {

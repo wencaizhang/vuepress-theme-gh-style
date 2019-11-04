@@ -1,5 +1,5 @@
 <template>
-  <div class="toc-container"
+  <div class="toc-container d-none d-lg-flex"
     @mouseenter="onMouseenter"
     @mouseleave="onMouseleaveSidebar"
     :class="sidebarClass"
@@ -126,7 +126,10 @@ export default {
   mounted () {
     let pined = window.localStorage.getItem('pined')
     this.visible = this.pined = !!pined;
-    this.setMargin();
+    let { width } = document.querySelector("body").getBoundingClientRect();
+    if (width > 1012) {
+      this.setMargin();
+    }
   },
   beforeDestroy() {
     document.querySelector("body").style.marginLeft = 0;
@@ -234,6 +237,7 @@ export default {
   .setting-view,
   .toc-view {
     height: 100%;
+    width: 100%;
     padding: 16px;
     padding-top 64px
     border-right: 1px solid rgb(223, 226, 229);
