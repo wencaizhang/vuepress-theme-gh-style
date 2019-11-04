@@ -190,10 +190,6 @@ export default {
 </script>
 
 <style scoped>
-.avatar {
-  /* width: 260px;
-  height: 260px; */
-}
 @media (min-width: 768px) {
   .avatar-before-user-status {
     border: 1px solid #e1e4e8;
