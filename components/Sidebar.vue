@@ -125,7 +125,7 @@ export default {
   },
   mounted () {
     let pined = window.localStorage.getItem('pined')
-    this.visible = this.pined = !!pined;
+    this.visible = this.pined = !!Number(pined);
     let { width } = document.querySelector("body").getBoundingClientRect();
     if (width > 1012) {
       this.setMargin();

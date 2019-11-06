@@ -11,7 +11,7 @@
           <!-- <span class="path-divider">/</span>
           <strong>{{ $page.title }}</strong>-->
         </h1>
-        <ul class="pagehead-actions list-style-none pt-lg-4">
+        <ul class="pagehead-actions list-style-none">
           <li>
             <router-link class="btn btn-sm btn-with-count" :to="{ path: '/' }">Posts</router-link>
             <router-link class="social-count" :to="{ path: '/' }">{{ postLength }}</router-link>
