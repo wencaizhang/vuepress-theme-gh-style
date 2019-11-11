@@ -31,7 +31,7 @@ Markdown是一种纯文本格式的标记语言。通过简单的标记语法，
 
 输出：
 
-![markdown-titles](https://gitee.com/wencaizhang_admin/images/raw/master/markdown-titles.png)
+![markdown-titles](https://cdn.jsdelivr.net/gh/wencaizhang/static@master/avatar.png)
 
 ## 列表
 

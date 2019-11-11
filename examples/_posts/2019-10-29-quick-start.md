@@ -100,7 +100,7 @@ module.exports = {
     // 个人信息（没有或不想设置的，注释或删掉或设为空对应字段即可）
     profile: {
       // 头像
-      avatar: 'https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/wencaizhang/static@master/avatar.png',
 
       // 所在地
       location: 'Beijing',
@@ -307,7 +307,7 @@ module.exports = {
     // 个人信息（没有或不想设置的，注释或删掉或设为空对应字段即可）
     profile: {
       // 头像
-      avatar: 'https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/wencaizhang/static@master/avatar.png',
 
       // 所在地
       location: 'Beijing',
@@ -456,7 +456,7 @@ module.exports = {
     // 个人信息（没有或不想设置的，注释或删掉或设为空对应字段即可）
     profile: {
       // 头像
-      avatar: 'https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/wencaizhang/static@master/avatar.png',
 
       // 所在地
       location: 'Beijing',

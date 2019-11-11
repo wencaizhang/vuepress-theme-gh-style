@@ -139,7 +139,7 @@
           <img
             alt="@wencaizhang"
             class="avatar"
-            src="https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png"
+            :src="$themeConfig.profile.avatar"
             height="20"
             width="20"
           />

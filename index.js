@@ -1,6 +1,6 @@
 function getRandomAvatar () {
   let n = Math.ceil((Math.random() * 25))
-  return `https://gitee.com/wencaizhang_admin/images/raw/master/github-avatar/avatar${n}.webp`
+  return `https://cdn.jsdelivr.net/gh/wencaizhang/static@master/github-avatar/avatar${n}.webp`
 }
 
 module.exports = (themeConfig, ctx) => {

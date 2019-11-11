@@ -1,5 +1,6 @@
 module.exports = {
   title: 'vuepress-theme-gh-style',
+  base: '/vuepress-theme-gh-style',
   theme: require.resolve('../../'),
 
   head: [
@@ -32,7 +33,7 @@ module.exports = {
     created: '发布时间',
     lastUpdated: '最后更新时间', // string | boolean
     profile: {
-      avatar: 'https://gitee.com/wencaizhang_admin/images/raw/master/avatar.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/wencaizhang/static@master/avatar.png',
       location: 'Beijing',
       company: 'Urplus',
       email: '1052642137@qq.com',
