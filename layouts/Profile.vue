@@ -176,7 +176,7 @@ export default {
   created () {
     // console.log(this.$route.query);
     // console.log(AVATAR);
-    this.avatar = AVATAR;
+    this.avatar = this.$themeConfig.profile.avatar;
   },
   computed: {
     profile () {
