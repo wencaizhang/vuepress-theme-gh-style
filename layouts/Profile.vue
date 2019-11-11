@@ -174,8 +174,8 @@ export default {
     }
   },
   created () {
-    console.log(this.$route.query);
-    console.log(AVATAR);
+    // console.log(this.$route.query);
+    // console.log(AVATAR);
     this.avatar = AVATAR;
   },
   computed: {

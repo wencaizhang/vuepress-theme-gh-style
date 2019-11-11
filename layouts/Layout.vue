@@ -26,9 +26,9 @@ import Profile from "./Profile";
 export default {
   components: { Pagination, PostItem, FilterVue, Profile },
   mounted() {
-    console.log(this);
-    console.log(this.$pagination);
-    console.log(this.$pagination.pages);
+    // console.log(this);
+    // console.log(this.$pagination);
+    // console.log(this.$pagination.pages);
   }
 };
 </script>

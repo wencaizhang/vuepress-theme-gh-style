@@ -139,14 +139,14 @@ export default {
       this.visible = true;
     },
     onMouseenter () {
-      console.log('onMouseenter');
+      // console.log('onMouseenter');
     },
     onMouseleaveSidebar () {
       if (this.pined) {
         return
       }
       this.visible = false;
-      console.log('false');
+      // console.log('false');
     },
     togglePined() {
       this.pined = !this.pined;

@@ -39,7 +39,7 @@ export default {
     };
   },
 
-  created() {
+  mounted() {
     this.paginationComponent = this.getPaginationComponent();
   },
 
@@ -48,7 +48,7 @@ export default {
       return this.$pagination.pages;
     },
     pageType () {
-      console.log(THEME_BLOG_PAGINATION_COMPONENT);
+      // console.log(THEME_BLOG_PAGINATION_COMPONENT);
       return THEME_BLOG_PAGINATION_COMPONENT
       // return 'Pagination'
       // return 'SimplePagination'

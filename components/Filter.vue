@@ -88,9 +88,9 @@ export default {
     },
   },
   mounted() {
-    console.log(this);
-    console.log(this.$currentTag && this.$currentTag.key);
-    console.log(this.$currentCategories && this.$currentCategories.key);
+    // console.log(this);
+    // console.log(this.$currentTag && this.$currentTag.key);
+    // console.log(this.$currentCategories && this.$currentCategories.key);
   },
   methods: {
 
