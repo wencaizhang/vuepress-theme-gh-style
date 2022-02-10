@@ -23,7 +23,7 @@
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "@vuepress/plugin-blog": "latest",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "vuepress": "next",
     "vuepress-plugin-container": "^2.1.0",
